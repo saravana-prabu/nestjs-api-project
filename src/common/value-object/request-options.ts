@@ -13,4 +13,6 @@ export class RequestOptions {
     data?: any;
 
     headers?: Record<string, any>;
+
+    transformationExpression?: any;
 }
