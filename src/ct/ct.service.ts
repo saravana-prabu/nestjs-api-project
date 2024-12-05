@@ -37,9 +37,9 @@ export class CtService implements StoreInterface {
       // Apply transformation using JSONata if provided
       console.log('responseData:::::',JSON.stringify(responseData));
       if (transformationExpression) {
-        responseData = transformResponse(responseData, transformationExpression);
+        responseData = await transformResponse(responseData, transformationExpression);
       }
-
+      console.log('Aferter transformationExpression responseData:::::',responseData);
       return responseData;
     } catch (error) {
       console.error('Error executing CT API request:', error);
