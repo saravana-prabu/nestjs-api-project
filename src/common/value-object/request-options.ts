@@ -15,4 +15,13 @@ export class RequestOptions {
     headers?: Record<string, any>;
 
     transformationExpression?: any;
+
+    storeType?: string;
+    funcCode?: string;
+    event?: any;
+    proxyKey?: string;
+    baseUrl?: string;
+    partURL?: string;
+    fullUrl?: string;
+    reqMethod?: string;
 }

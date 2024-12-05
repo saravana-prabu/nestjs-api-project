@@ -1,4 +1,5 @@
-import * as jsonata from 'jsonata';
+// import * as jsonata from 'jsonata';
+import jsonata from 'jsonata'; // Use default import
 import { TransformationException } from "../../exceptions/transformation.exception";
 
 /**

@@ -1,0 +1,1421 @@
+{
+  "FACETS":[
+      { "facetValue": "color", "facetPath": "variants.attributes.color.key", "facetType": "String" },
+      { "facetValue": "size", "facetPath": "variants.attributes.size", "facetType": "String" },
+      { "facetValue": "style", "facetPath": "variants.attributes.style.key", "facetType": "String" },
+      { "facetValue": "commonSize", "facetPath": "variants.attributes.commonSize.key", "facetType": "String" },
+      { "facetValue": "price", "facetPath": "variants.scopedPrice.currentValue.centAmount", "facetType": "String" },
+      { "facetValue": "gender", "facetPath": "variants.attributes.gender.key", "facetType": "String" }
+    ],
+  "MOCK": {
+    "BFF": {
+      "baseApiUrl": "http://192.168.15.185:5000/api/",
+      "authbaseApiUrl": "http://192.168.15.185:5000",
+      "generateToken": false
+    },
+    "BASE": {
+      "baseApiUrl": "",
+	   "authbaseApiUrl":"https://auth.australia-southeast1.gcp.commercetools.com/oauth/token?grant_type=client_credentials",
+      "PDP": {
+        "part_url": "pdp"
+      },
+      "MODULES": {
+        "part_url": "modules"
+      },
+      "PRIVACY": {
+        "part_url": "privacyPolicy"
+      },
+      "TERMS": {
+        "part_url": "termsCondtions"
+      },
+      "HOME": {
+        "part_url": "home"
+      },
+      "Home": {
+        "part_url": "home",
+        "isBFF_part_url": "homeRecommendation",
+        "isBFF": false
+      },
+      "PLP": {
+        "part_url": "plp"
+      },
+      "SEARCH": {
+        "part_url": "search"
+      },
+      "SEARCHCAT": {
+        "part_url": "search"
+      },
+      "TOPNAV": {
+        "part_url": "topnav"
+      },
+      "MENU": {
+        "part_url": "menu"
+      },
+      "addLineItem": {
+        "part_url": "addLineItem"
+      },
+      "updateQuantity": {
+        "part_url": "updateQuantity"
+      },
+      "saveforlater": {
+        "part_url": "saveforlater"
+      },
+      "wishlists": {
+        "part_url": "wishlist"
+      },
+      "getWishlistId": {
+        "part_url": "getWishlistId"
+      },
+      "addItemToWishlist": {
+        "part_url": "addToWishlist"
+      },
+      "movetowishlist": {
+        "part_url": "movetowishlist"
+      },
+      "createWishlist": {
+        "part_url": "createWishlist",
+        "responseRootNode":"createWishlistAction"
+      },
+      "removeItemFromWishlist": {
+        "part_url": "removeItemFromWishlist",
+        "responseRootNode":"removeItemFromWishlistAction"
+      },
+      "viewWishlist": {
+        "part_url": "viewWishlist"
+      },
+      "deleteWishlist": {
+        "part_url": "deleteWishlist"
+      },
+      "removeLineItem": {
+        "part_url": "removeLineItem"
+      },
+      "autoSuggest": {
+        "part_url": "autoSuggest",
+        "responseRootNode":"autoSuggestion"
+      },
+      "coupons": {
+        "part_url": "coupons"
+      },
+      "FLIST": {
+        "part_url": "categoriesandhelp"
+      },
+      "Promo": {
+        "part_url": "promo"
+      },
+      "BestSellers": {
+        "part_url": "search"
+      },
+      "InspiredProducts": {
+        "part_url": "search"
+      },
+      "Recommend": {
+        "part_url": "search"
+      },
+      "NewArrival": {
+        "part_url": "search"
+      },
+      "FeaturedProduct": {
+        "part_url": "search"
+      },
+      "TopDeals": {
+        "part_url": "topdeals"
+      },
+      "PromoImage": {
+        "part_url": "promoimage"
+      },
+      "ItemMLRecoScala": {
+        "part_url": "search"
+      },
+      "SIMILARPRODUCTS": {
+        "part_url": "similarproducts"
+      },
+      "viewCart": {
+        "part_url": "viewCart"
+      },
+      "createCart": {
+        "part_url": "createCart"
+      },
+      "myorders": {
+        "part_url": "myorders"
+      },
+      "myordersdetails": {
+        "part_url": "myordersdetails"
+      },
+      "UPDATECUSTOMER": {
+        "part_url": "updatecustomer"
+      },
+      "UPDATEPASSWORD": {
+        "part_url": "updatepassword"
+      },
+      "USERPROFILE": {
+        "part_url": "userprofile"
+      },
+      "MANAGEADDRESS": {
+        "part_url": "manageaddress"
+      },
+      "ADDNEWADDRESS": {
+        "part_url": "addnewaddress"
+      },
+      "REMOVEADDRESS": {
+        "part_url": "removeaddress"
+      },
+      "UPDATEADDRESS": {
+        "part_url": "updateaddress"
+      },
+      "RESOLVECART": {
+        "part_url": "resolvecart"
+      },
+      "routeBase": "MD",
+      "tokenName": "md_token_name"
+    },
+    "AUTH": {
+      "baseApiUrl": "",
+      "LOGIN": {
+        "part_url": "login"
+      },
+      "POSTLOGIN": {
+        "part_url": "postlogin"
+      },
+      "requestType": "API"
+    },
+    "AUTH1": {
+      "baseApiUrl": "",
+      "SIGNUP": {
+        "part_url": "signup",
+        "req_mode": "POST"
+      },
+      "requestType": "API"
+    },
+    "XP": {
+      "baseApiUrl": "",
+      "MEGAMENU": {
+        "part_url": "megamenu"
+      },
+      "MenuTree": {
+        "part_url": "menuTree"
+      },
+      "FOOTER": {
+        "part_url": "footer"
+      },
+      "requestType": "GQL"
+    }
+  },
+  "CT": {
+    "FACETS":[
+      { "facetValue": "color", "facetPath": "variants.attributes.color.key", "facetType": "String" },
+      { "facetValue": "size", "facetPath": "variants.attributes.size", "facetType": "String" },
+      { "facetValue": "style", "facetPath": "variants.attributes.style.key", "facetType": "String" },
+      { "facetValue": "commonSize", "facetPath": "variants.attributes.commonSize.key", "facetType": "String" },
+      { "facetValue": "price", "facetPath": "variants.scopedPrice.currentValue.centAmount", "facetType": "String" },
+      { "facetValue": "gender", "facetPath": "variants.attributes.gender.key", "facetType": "String" }
+    ],
+    "AGGREGATOR": {
+      "login": "LOGIN,POSTLOGIN,POSTCREATECART",
+      "homeRecommendation": "NewArrival,NewCommerce,BestSellers,TopCategories,TopDeals,PrimeDeals,MostViewed_AWS,FeaturedProduct",
+      "addToCart": "viewCart,addToCart",
+      "updateLineItem": "viewCart,updateLineItem",
+      "removeLineItem": "viewCart,removeLineItem",
+      "updateShippingAddress":"viewCart,updateShippingAddress",
+      "processCheckout": "viewCart,processCheckout",
+      "moveToBilling": "viewCart,updateShippingAddress",
+      "updateCustomTypeLineItem": "viewCart,updateCustomTypeLineItem",
+      "updateLineItemShippingAddress": "viewCart,updateLineItemShippingAddress",
+      "moveToCheckout": "customerAddress,shippingMethods",
+      "addCustomerAddress": "customerVersion,addCustomerAddress",
+      "updateCustomerAddress": "customerVersion,updateCustomerAddress",
+      "updateCustomerDetails":"customerVersion,updateCustomerDetails",
+      "removeAddressAction":"customerVersion,removeAddressAction",
+      "changePassword": "customerVersion,changePassword",
+      "createReview":"getCustomer,createReview"
+    },
+    
+    "SIGNAL": {
+      "baseApiUrl": "http://192.168.15.27:8080/dessignals",
+      "generateToken": false
+    },
+    "BFF": {
+      "baseApiUrl": "http://192.168.15.185:5000/api/",
+      "baseApiUrl1": "https://headless.logixal.com/bff/api/",
+      "authbaseApiUrl": "http://192.168.15.185:5000",
+      "generateToken": false
+    },
+    "CMS": {
+      "baseApiUrl": "https://headless.logixal.com/bff/api/",
+      "MENU": {
+        "part_url": "strapi/menus",
+        "req_mode": "POST",
+        "isBFF_part_url": "strapi/menus",
+        "isBFF": false
+      },
+      "Promo": {
+        "part_url": "strapi/banners",
+        "req_mode": "POST",
+        "isBFF_part_url": "strapi/banners",
+        "isBFF": false
+      },
+      "requestType": "API",
+      "generateToken": false
+    },
+    "BASE": {
+      "baseApiUrl": "https://api.australia-southeast1.gcp.commercetools.com",
+      "authbaseApiUrl": "https://auth.australia-southeast1.gcp.commercetools.com/oauth/token?grant_type=client_credentials",
+      "graphApiUrl": "https://api.australia-southeast1.gcp.commercetools.com/newproject/graphql",
+      
+      "getCustomerByEmail": {
+        "part_url": "getCustomerByEmail",
+        "req_mode": "POST",
+        "responseRootNode":"getCustomerByEmail"
+      },
+      "changePassword": {
+        "part_url": "/customers/password",
+        "req_mode": "POST",
+        "responseRootNode":"changePasswordAction",
+        "syncFlow": true
+      },
+      "resetPasswordToken": {
+        "part_url": "/customers/password-token",
+        "req_mode": "POST",
+        "responseRootNode":"resetPasswordTokenAction"
+      },
+      "passwordResetEmail": {
+        "part_url": "/customers/password-token",
+        "req_mode": "POST",
+        "responseRootNode":"resetPasswordTokenAction"
+      },
+      "resetPassword": {
+        "part_url": "/customers/password/reset",
+        "req_mode": "POST",
+        "responseRootNode":"resetPasswordAction"
+      },
+      "homeRecommendation": {
+        "part_url": "homeRecommendation",
+        "asyncFlow": true
+      },
+      "moveToCheckout": {
+        "part_url": "moveToCheckout",
+        "asyncFlow": true
+      },
+      "moveToBilling": {
+        "part_url": "updateShippingAddress",
+        "responseRootNode":"updateShippingAddressAction",
+       "syncFlow": true
+      },
+      "address": {
+        "part_url": "address",
+        "req_mode": "POST",
+        "responseRootNode":"removeLineItemAction"
+      },
+      "addCustomerAddress": {
+        "part_url": "addCustomerAddress",
+        "responseRootNode":"addCustomerAddressAction",
+        "req_mode": "POST",
+        "isBFF_part_url": "addCustomerAddress",
+        "isBFF": false,
+        "syncFlow": true
+      },
+      "updateCustomerAddress": {
+        "part_url": "updateCustomerAddress",
+        "responseRootNode":"updateCustomerAddressAction",
+        "req_mode": "POST",
+        "isBFF_part_url": "updateCustomerAddress",
+        "isBFF": false,
+        "syncFlow": true
+      }
+      ,
+      "pdp": {
+        "part_url": "pdp",
+        "responseRootNode":"productDetails"
+      },
+      "menu": {
+        "part_url": "menu",
+        "responseRootNode":"menu"
+      },
+      "addToCart": {
+        "part_url": "addLineItem",
+        "aggregator": false,
+        "responseRootNode":"addToCartAction",
+        "syncFlow": true
+      },
+      "viewCart": {
+        "part_url": "viewCart",
+        "responseRootNode":"viewCartAction"
+      },
+      "updateLineItem": {
+        "part_url": "updateQuantity",
+        "responseRootNode":"updateLineItemAction",
+        "syncFlow": true
+      },
+      "removeLineItem": {
+        "part_url": "removeLineItem",
+        "responseRootNode":"removeLineItemAction",
+        "syncFlow": true
+      },
+      "updateQuantity": {
+        "part_url": "updateQuantity",
+        "responseRootNode":"updateQuantity"
+      },
+      "cartVersion": {
+        "part_url": "cartVersion",
+        "responseRootNode":"cartVersion"
+      },
+      "createCart": {
+        "part_url": "createCart",
+        "responseRootNode":"createCartAction"
+      },
+      "wishlists": {
+        "part_url": "wishlist",
+        "responseRootNode":"wishlists"
+      },
+      "createWishlist": {
+        "part_url": "createWishlist",
+        "responseRootNode":"createWishlistAction"
+      },
+      "addItemToWishlist": {
+        "part_url": "addToWishlist",
+        "responseRootNode":"addItemToWishlistAction"
+      },
+      "removeItemFromWishlist": {
+        "part_url": "removeItemFromWishlist",
+        "responseRootNode":"removeItemFromWishlistAction"
+      },
+      "deleteWishlist": {
+        "part_url": "deleteWishlist",
+        "responseRootNode":"deleteWishlistDetails"
+      },
+      "viewWishlist": {
+        "part_url": "viewWishlist",
+        "responseRootNode":"viewWishlistDetails"
+      },
+      "processCheckout":{
+        "part_url": "processCheckout",
+        "responseRootNode":"processCheckout",
+        "syncFlow": true
+      },
+      "CreateOrder": {
+        "part_url": "/CreateOrder",
+        "method_type": "POST",
+        "responseRootNode":"CreateOrder"
+      },
+      "setShippingAddress": {
+        "part_url": "setShippingAddress",
+        "method_type": "POST",
+        "responseRootNode":"setShippingAddress"
+      },
+      "myOrders": {
+        "part_url": "/newproject/myorders",
+        "responseRootNode":"myOrders"
+      },
+      "orderDetails": {
+        "part_url": "/newproject/myordersdetails",
+        "responseRootNode":"orderDetails"
+      },
+      "plp": {
+        "part_url": "plp",
+        "getReco": false,
+        "facetRequired":true,
+        "responseRootNode":"plp"
+      },
+      "plpWithoutResults": {
+        "part_url": "plp",
+        "getReco": false,
+        "facetRequired":true,
+        "responseRootNode":"plp"
+      },
+      "SEARCHCAT": {
+        "part_url": "searchcat"
+      },
+      "TOPNAV": {
+        "part_url": "topnav"
+      },
+
+      "FLIST": {
+        "part_url": "categoriesandhelp"
+      },
+      "Promo": {
+        "part_url": "promo"
+      },
+      "PrimeDeals": {
+        "part_url": "plp",
+        "getReco": true,
+        "recoBefore":true,
+        "responseRootNode":"PrimeDeals"
+      },
+      "BestSellers": {
+        "part_url": "plp",
+        "getReco": true,
+        "responseRootNode":"BestSellers"
+      },
+      "InspiredProducts": {
+        "part_url": "plp",
+        "getReco": true,
+        "recoBefore":true,
+        "responseRootNode":"InspiredProducts"
+      },
+      "Recommend": {
+        "part_url": "plp",
+        "getReco": true,
+        "callBefore": true,
+        "responseRootNode":"Recommend"
+      },
+      "UserRecommend": {
+        "part_url": "plp",
+        "getReco": true,
+        "callBefore": true,
+        "recoBefore":true,
+        "responseRootNode":"UserRecommend"
+      },
+      "frequentlyBroughtTogeather": {
+        "part_url": "frequentlyBroughtTogeather",
+        "getReco": true,
+        "callBefore": true,
+        "responseRootNode":"frequentlyBroughtTogeather"
+        
+      },
+      "recommendations-aws": {
+        "part_url": "recommendations-aws",
+        "getReco": true,
+        "callBefore": true,
+        "responseRootNode":"recommendations-aws"
+        
+      },
+      "CustomersAlsoViewed_AWS": {
+        "part_url": "CustomersAlsoViewed_AWS",
+        "getReco": true,
+        "callBefore": true,
+        "responseRootNode":"CustomersAlsoViewed_AWS"
+        
+      },
+      "MostViewed_AWS": {
+        "part_url": "plp",
+        "getReco": true,
+        "callBefore": true,
+        "responseRootNode":"MostViewed"
+      },
+      "RelatedProducts": {
+        "part_url": "RelatedProducts",
+        "getReco": true,
+        "callBefore": true,
+        "responseRootNode":"RelatedProducts"
+      },
+      "NewArrival": {
+        "part_url": "plp",
+        "getReco": true,
+        "recoBefore":true,
+        "responseRootNode":"NewArrival"
+      },
+      "NewCommerce": {
+        "part_url": "plp",
+        "getReco": true,
+        "responseRootNode":"NewCommerce"
+      },
+      "FeaturedProduct": {
+        "part_url": "plp",
+        "getReco": true,
+        "recoBefore":true,
+        "responseRootNode":"FeaturedProduct"
+      },
+      "TopDeals": {
+        "part_url": "topdeals",
+        "getReco": true,
+        "recoBefore":true,
+        "responseRootNode":"TopDeals"
+      },
+      "TopProducts": {
+        "part_url": "/api/CT/homeRecommendation",
+        "getReco": true,
+        "recoBefore":true,
+        "responseRootNode":"TopProducts"
+      },
+      "TopCategories": {
+        "part_url": "/api/CT/homeRecommendation",
+        "getReco": true,
+        "recoBefore":true,
+        "responseRootNode":"TopCategories"
+      },
+      "TrendingOnSocialMedia": {
+        "part_url": "/api/CT/homeRecommendation",
+        "getReco": true,
+        "callBefore":true,
+        "recoBefore":true,
+        "responseRootNode":"TrendingOnSocialMedia"
+      },
+      "getOffers": {
+        "part_url": "/api/CT/homeRecommendation",
+        "getReco": true,
+        "recoBefore":true,
+        "responseRootNode":"getOffers"
+      },
+      "PromoImage": {
+        "part_url": "promoimage",
+        "responseRootNode":"PromoImage"
+      },
+      "SIMILARPRODUCTS": {
+        "part_url": "similarproducts",
+        "responseRootNode":"SIMILARPRODUCTS"
+      },
+      "UPDATECUSTOMER": {
+        "part_url": "updatecustomer"
+      },
+      "USERPROFILE": {
+        "part_url": "userprofile"
+      },
+      "UPDATEPASSWORD": {
+        "part_url": "updatepassword"
+      },
+      "ADDNEWADDRESS": {
+        "part_url": "addnewaddress"
+      },
+      "REMOVEADDRESS": {
+        "part_url": "removeaddress"
+      },
+      "UPDATEADDRESS": {
+        "part_url": "updateaddress"
+      },
+      "autoSuggestion": {
+        "part_url": "autoSuggest",
+        "responseRootNode":"autoSuggestion"
+      },      
+      "customerVersion":{
+        "part_url": "customerVersion",
+        "responseRootNode":"customerVersion"
+      },
+      "wishlistVersion":{
+        "part_url": "wishlistVersion",
+        "responseRootNode":"wishlistVersion"
+      },
+      "getCustomer":{
+        "part_url": "getCustomer",
+        "responseRootNode":"getCustomerAction"
+      },
+      "createReview":{
+        "part_url": "createReview",
+        "responseRootNode":"createReviewAction",
+        "syncFlow":true
+      },
+      "getProductReviews":{
+        "part_url": "getProductReviews",
+        "responseRootNode":"getProductReviews"
+      },
+      "updateShippingAddress":{
+        "part_url": "updateShippingAddress",
+        "responseRootNode":"updateShippingAddressAction",
+        "syncFlow": true
+      },
+      "updateCustomerDetails":{
+        "part_url": "updateCustomerDetails",
+        "responseRootNode":"updateCustomerDetails",
+        "syncFlow": true
+      },
+      "removeAddressAction":{
+        "part_url": "removeaddressAction",
+        "responseRootNode":"removeAddressAction",
+        "syncFlow":true
+      },
+      "updateCustomTypeLineItem": {
+        "part_url": "updateCustomTypeLineItem",
+        "getReco": true,
+        "callBefore": true,
+        "responseRootNode":"updateCustomTypeLineItem",
+        "syncFlow":true
+      },
+      "shippingMethods":{
+        "part_url": "shippingMethods",
+        "responseRootNode":"shippingMethods"
+      },
+      "customerAddress":{
+        "part_url": "customerAddress",
+        "responseRootNode":"customerAddress"
+      },
+      "updateLineItemShippingAddress":{
+        "part_url": "updateLineItemShippingAddress",
+        "responseRootNode":"updateLineItemShippingAddress",
+        "syncFlow":true
+      },
+      "signUp": {
+        "part_url": "SIGNUP",
+        "responseRootNode":"signUpDetails",
+        "req_mode": "POST"
+      },
+      "routeBase": "CT",
+      "tokenName": "ct_token_name",
+      "requestType": "GQL",
+      "generateToken": true
+    },
+    "AUTH": {
+      "authbaseApiUrl": "https://auth.australia-southeast1.gcp.commercetools.com/oauth/newproject",
+      "baseApiUrl": "https://api.australia-southeast1.gcp.commercetools.com/newproject",
+      "login": {
+        "aggregator": true
+      },
+      "LOGIN": {
+        "part_url": "/customers/token?grant_type=password&",
+        "req_mode": "POST"
+      },
+      "POSTLOGIN": {
+        "part_url": "/me/login",
+        "req_mode": "POST"
+      },
+      "POSTCREATECART": {
+        "part_url": "/me/carts",
+        "req_mode": "POST"
+      },
+      "logout": {
+        "part_url": "logout",
+        "req_mode": "POST",
+        "responseRootNode":"logout"
+      },
+      
+     
+      "requestType": "API",
+      "generateToken": false
+    },
+    "XP": {
+      "baseApiUrl": "https://api.australia-southeast1.gcp.commercetools.com/",
+      "authbaseApiUrl": "https://auth.australia-southeast1.gcp.commercetools.com/oauth/token?grant_type=client_credentials",
+      "graphApiUrl": "https://api.australia-southeast1.gcp.commercetools.com/newproject/graphql",
+      "MEGAMENU": {
+        "part_url": "megamenu"
+      },
+      "MenuTree": {
+        "part_url": "menuTree"
+      },
+      "FOOTER": {
+        "part_url": "footer"
+      },
+      "requestType": "GQL"
+    }
+  },
+  "BL": {
+
+    "applicationId": "01J0QJXB11QXSW1BDQRTSM1W26",
+    "applicationToken": "BE_PRO",
+    "tenantId": "5DF1363059675161A85F576D",
+    "clientId": "bepro.localhost",
+    "authHeaderName": "X-Context-Request",
+
+    "baseApiUrl-orgonal": "https://headless.logixal.com/bldemo",
+
+    "baseApiUrl": "https://v2.jokeapi.dev",
+
+    "test":{
+       "part_url": "/joke/Any",
+      "req_mode": "GET"
+    },
+    "login": {
+      "part_url": "/auth/embedded/login?",
+      "req_mode": "POST"
+    },
+    
+    "FACETS":[
+      { "facetValue": "color", "facetPath": "variants.attributes.color.key", "facetType": "String" },
+      { "facetValue": "size", "facetPath": "variants.attributes.size", "facetType": "String" },
+      { "facetValue": "style", "facetPath": "variants.attributes.style.key", "facetType": "String" },
+      { "facetValue": "commonSize", "facetPath": "variants.attributes.commonSize.key", "facetType": "String" },
+      { "facetValue": "price", "facetPath": "variants.scopedPrice.currentValue.centAmount", "facetType": "String" },
+      { "facetValue": "gender", "facetPath": "variants.attributes.gender.key", "facetType": "String" }
+    ],
+    "AGGREGATOR": {
+      "login": "LOGIN,POSTLOGIN",
+      "homeRecommendation": "NewArrival,NewCommerce,InspiredProducts,BestSellers,TopCategories,TopDeals,PrimeDeals,MostViewed_AWS,FeaturedProduct",
+      "addToCart": "createCart,viewCart,addToCart",
+      "moveToBilling": "viewCart,moveToBilling,fulfillmentOption,viewCart,moveToBilling",
+      "moveToCheckout": "viewCart,fulfillmentOption",
+      "processCheckout": "viewCart,processCheckout",
+      "updateLineItem": "viewCart,updateLineItem",
+      "removeLineItem": "viewCart,removeLineItem"
+      
+    },
+    "SIGNAL": {
+      "baseApiUrl": "http://192.168.15.27:8080/dessignals"
+    },
+    "BFF": {
+      "baseApiUrl": "https://headless.logixal.com/bff/api",
+      "generateToken": false
+    },
+    "AUTH": {
+      "authbaseApiUrl": "https://headless.logixal.com/bldemo",
+      "baseApiUrl": "https://headless.logixal.com/bldemo",
+      "login": {
+        "aggregator": true
+      },
+      "LOGIN": {
+          "part_url": "/auth/embedded/login?",
+          "req_mode": "POST",
+          "isBFF_part_url": "login",
+          "isBFF": true
+      },
+      "POSTLOGIN": {
+          "part_url":
+              "/auth/oauth/token?client_id=bepro.localhost&grant_type=authorization_code&scope=USER CUSTOMER_USER OFFLINE_ACCESS&purpose=OTP",
+          "req_mode": "POST"
+      },
+      "logout": {
+        "part_url": "logout",
+        "req_mode": "POST",
+        "responseRootNode":"logout"
+      }
+    },
+    "BASE": {
+      "getRefreshToken": {
+        "part_url": "/auth/oauth/token?grant_type=client_credentials&scope=CUSTOMER_IGNORE_NARROWING",
+        "req_mode": "POST",
+        "responseRootNode":"getRefreshToken"
+      },
+      "getCustomerByEmail": {
+        "part_url": "/api/customer/customers/ignore-narrowing?cq=email=={email}",
+        "req_mode": "GET",
+        "responseRootNode":"getCustomerByEmail"
+      },
+      "address": {
+        "part_url": "/api/customer/customers/{customerId}/addresses",
+        "req_mode": "GET",
+        "responseRootNode":"customerAddressAction"
+      },
+      "pdp": {
+        "part_url": "/api/catalog-browse/products/details?productIds={productId}",
+        "req_mode": "GET",
+        "responseRootNode":"productDetails"
+      },
+      "MODULES": {
+        "part_url": "modules"
+      },
+      "TOPNAVIGATION": {
+        "part_url": "navigation"
+      },
+      "TOPNAV": {
+        "part_url": "topnav"
+      },
+      "MENU": {
+        "part_url": "menu"
+      },
+      "menu": {
+        "part_url": "/api/menu/menu-hierarchy?menuName=HEADER_MENU&depthLimit=2147483647",
+        "responseRootNode":"menu",
+        "req_mode": "GET"
+      },
+      "homeRecommendation": {
+        "part_url": "homeRecommendation",
+        "isBFF_part_url": "homeRecommendation",
+        "isBFF": true,
+        "getReco": false,
+        "asyncFlow": true
+      },
+      "MEGAMENU": {
+        "part_url": "megamenu"
+      },
+      "FOOTER": {
+        "part_url": "footer"
+      },
+      "HEADER": {
+        "part_url": "nav"
+      },
+      "PLP": {
+        "part_url": "/api/catalog-browse/search/catalog?size=4&type=PRODUCT&section=BestSellers"
+      },
+      "FLIST": {
+        "part_url": "categoriesandhelp"
+      },
+      "plp": {
+        "part_url": "/api/catalog-browse/search/catalog?size=4&type=PRODUCT&query={searchTerm}",
+        "method_type": "GET",
+        "facetRequired":true,
+        "responseRootNode":"plp"
+      },
+      "SEARCHCAT": {
+        "part_url": "searchcat",
+        "getReco": false,
+        "isBFF_part_url": "plp",
+        "isBFF": true,
+        "callBefore": false
+      },
+      "payments": {
+        "part_url": "/api/payment/payments/?ownerId={cartId}&ownerType=BLC_CART",
+        "req_mode": "GET",
+        "isBFF_part_url": "payments",
+        "isBFF": true,
+        "getReco": false,
+        "responseRootNode":"payments",
+        "syncFlow": false
+      },
+      "fulfillmentOption": {
+        "part_url": "/api/cart-operations/checkout/{cartId}/fulfillment-options/{cartId}-0",
+        "req_mode": "GET",
+        "isBFF_part_url": "fulfillmentOption",
+        "isBFF": true,
+        "getReco": false,
+        "responseRootNode":"fulfillmentOption",
+        "syncFlow": false
+      },
+      "moveToBilling": {
+        "part_url": "/api/cart-operations/checkout/{cartId}/fulfillment-groups/{cartId}-0",
+        "req_mode": "PATCH",
+        "isBFF_part_url": "moveToBilling",
+        "isBFF": true,
+        "getReco": false,
+        "responseRootNode":"updateShippingAddressAction",
+        "syncFlow": true
+      },
+      "moveToCheckout": {
+        "part_url": "moveToCheckout",
+        "syncFlow": true
+      },
+      "createPayment": {
+        "part_url": "/api/payment/customer-payments",
+        "req_mode": "POST",
+        "isBFF_part_url": "createPayment",
+        "isBFF": true,
+        "getReco": false,
+        "responseRootNode":"createPayment"
+      },
+      "processCheckout": {
+        "part_url": "/api/cart-operations/checkout/{cartId}/process",
+        "req_mode": "POST",
+        "isBFF_part_url": "processCheckout",
+        "isBFF": true,
+        "getReco": false,
+        "responseRootNode":"processCheckout",
+        "syncFlow": true
+      },
+      "orderDetails": {
+        "part_url": "/api/order-operations/order-history/{orderId}",
+        "req_mode": "GET",
+        "isBFF_part_url": "orderDetails",
+        "isBFF": true,
+        "getReco": false,
+        "responseRootNode":"orderDetails"
+      },
+      "setShippingAddress": {
+        "part_url": "/api/cart-operations/checkout/{cartId}/fulfillment-groups/{cartId}-0?price=true",
+        "req_mode": "POST",
+        "isBFF_part_url": "moveToBilling",
+        "isBFF": true,
+        "getReco": false,
+        "responseRootNode":"updateShippingAddressAction"
+      },
+      "autoSuggestion": {
+        "part_url": "/api/catalog-browse/search/catalog/suggest?config=productTypeAhead&query={query}",
+        "req_mode": "GET",
+        "responseRootNode":"autoSuggestion"
+      },
+      "CreateOrder": {
+        "part_url": "orders",
+        "req_mode": "POST",
+        "getReco": false
+      },
+      "changePassword": {
+        "part_url": "/auth/embedded/change-password?client_id=bepro.localhost",
+        "req_mode": "POST",
+        "responseRootNode":"changePasswordAction"
+      },
+      "USERPROFILE": {
+        "part_url": "/api/customer/customers/{customerId}/addresses",
+        "isBFF_part_url": "address",
+        "isBFF": true,
+        "getReco": false
+      },
+      "Promo": {
+        "part_url": "promo",
+        "getReco": false
+      },
+      "HomeBanner": {
+        "part_url": "homebanner",
+        "getReco": false
+      },
+      "BestSellers": {
+        "part_url": "/api/catalog-browse/search/catalog?section=BestSellers&size=15&type=PRODUCT",
+        "responseRootNode":"BestSellers"
+      },
+      "PrimeDeals": {
+        "part_url": "/api/catalog-browse/search/catalog?section=PrimeDeals&size=15&type=PRODUCT",
+        "responseRootNode":"PrimeDeals"
+      },
+      "InspiredProducts": {
+        "part_url": "/api/catalog-browse/search/catalog?size=15&type=PRODUCT&section=TrendingOnSocialMedia",
+        "responseRootNode":"InspiredProducts"
+      },
+      "TrendingOnSocialMedia": {
+        "part_url": "TrendingOnSocialMedia",
+        "responseRootNode":"TrendingOnSocialMedia"
+      },
+      "NewArrival": {
+        "part_url": "/api/catalog-browse/search/catalog?section=BestSellers&size=15&type=PRODUCT",
+        "responseRootNode":"NewArrival"
+      },
+      "NewCommerce": {
+        "part_url": "/api/catalog-browse/search/catalog?section=NewCommerce&size=15&type=PRODUCT",
+        "responseRootNode":"NewCommerce"
+      },
+      "FeaturedProduct": {
+        "part_url": "/api/catalog-browse/search/catalog?section=FeaturedProduct&size=10&type=PRODUCT",
+       "responseRootNode":"FeaturedProduct"
+      },
+      "TopDeals": {
+        "part_url": "/api/catalog-browse/search/catalog?size=15&type=PRODUCT&section=BestSellers",
+        "responseRootNode":"TopDeals"
+      },
+      "Recommend": {
+        "part_url": "/api/catalog-browse/search/catalog?section=Recommend&size=15&type=PRODUCT",
+        "getReco": false,
+        "responseRootNode":"Recommend"
+      },
+      "getProductReviews": {
+        "part_url": "/api/ratings/rating-detail/product/{productId}",
+        "responseRootNode":"getProductReviews"
+      },
+      "createReview": {
+        "part_url": "/api/ratings/rating-detail/product/{productId}",
+        "responseRootNode": "createReviewAction"
+    
+      },
+      "PromoImage": {
+        "part_url": "promoimage",
+        "getReco": false
+      },
+      "SIMILARPRODUCTS@@": {
+        "part_url": "similarproducts",
+        "getReco": false
+      },
+      "APPLYOFFERCCODETOCART": {
+        "req_mode": "POST",
+        "isBFF_part_url": "applyOfferCodeToCart",
+        "isBFF": true,
+        "getReco": false
+      },
+      "updateQuantity": {
+        "part_url": "updateQuantity",
+        "isBFF_part_url": "updateLineItem",
+        "isBFF": true,
+        "getReco": false
+      },
+      "updateLineItem": {
+        "req_mode": "PATCH",
+        "part_url": "/api/cart-operations/cart/{cartId}/items/{lineItemId}",
+        "isBFF_part_url": "updateLineItem",
+        "isBFF": true,
+        "getReco": false,
+        "responseRootNode":"updateLineItemAction",
+        "syncFlow": true
+      },
+      "removeLineItem": {
+        "req_mode": "DELETE",
+        "part_url": "/api/cart-operations/cart/{cartId}/items/{lineItemId}",
+        "isBFF_part_url": "removeLineItem",
+        "isBFF": true,
+        "getReco": false,
+        "responseRootNode":"removeLineItemAction",
+        "syncFlow": true
+      },
+      "addLineItem": {
+        "part_url": "/api/cart-operations/cart/items",
+        "req_mode": "POST",
+        "isBFF_part_url": "addToCart",
+        "isBFF": true,
+        "getReco": false
+      },
+      "createCart":{
+        "part_url": "/api/cart-operations/cart",
+        "req_mode": "POST",
+        "isBFF_part_url": "createCart",
+        "isBFF": true,
+        "getReco": false,
+        "responseRootNode": "addToCartAction"
+      },
+      "addToCart": {
+        "part_url": "/api/cart-operations/cart/{cartId}/items",
+        "req_mode": "POST",
+        "isBFF_part_url": "addToCart",
+        "isBFF": true,
+        "getReco": false,
+        "responseRootNode": "addToCartAction",
+        "syncFlow": true
+      },
+      "viewCart": {
+        "part_url": "/api/cart-operations/cart/{cartId}",
+        "req_mode": "GET",
+        "isBFF_part_url": "viewCart",
+        "isBFF": true,
+        "getReco": false,
+        "responseRootNode":"viewCartAction"
+      },
+      "getWishlistId": {
+        "part_url": "/api/cart-operations/item-list-ops/{itemListId}/items",
+        "req_mode": "GET",
+        "getReco": false
+      },
+      "addItemToWishlist": {
+        "part_url": "/api/cart-operations/item-list-ops/{itemListId}/items",
+        "req_mode": "POST",
+        "responseRootNode": "addItemToWishlistDetails"
+      },
+      "viewWishlist": {
+        "part_url": "/api/cart-operations/item-list-ops",
+        "responseRootNode": "viewWishlistDetails",
+        "req_mode": "GET",
+        "isBFF": true,
+        "getReco": false
+      },
+      "createWishlist": {
+        "part_url": "/api/cart-operations/item-list-ops",
+        "isBFF_part_url": "createWishlist",
+        "responseRootNode":"createWishlistAction"
+      },
+      "removeItemFromWishlist": {
+        "part_url": "/api/cart-operations/item-list-ops/{id}/items/{lineItemId}",
+        "responseRootNode": "removeItemFromWishlistDetails",
+        "req_mode": "DELETE",
+        "isBFF": true,
+        "getReco": false
+      },
+      "deleteWishlist": {
+        "part_url": "/api/cart-operations/item-list-ops/{id}",
+        "isBFF_part_url": "deleteWishlist",
+        "req_mode": "DELETE",
+        "isBFF": true,
+        "getReco": false
+      },
+      "myOrders": {
+        "part_url": "/api/order-operations/order-history",
+        "method_type": "GET",
+        "responseRootNode":"myOrders"
+      },
+      "myordersdetails": {
+        "part_url": "/api/order-operations/order-history/{orderId}",
+        "method_type": "GET",
+        "isBFF_part_url": "orderDetails",
+        "isBFF": true,
+        "getReco": false
+      },
+      "UPDATECUSTOMER": {
+        "part_url": "/api/customer/customers/{id}",
+        "req_mode": "PUT",
+        "getReco": false
+      },
+      "FETCHUSERADDRESSES": {
+        "part_url": "/api/customer/customers/{id}/addresses",
+        "req_mode": "GET",
+        "getReco": false
+      },
+      "addCustomerAddress": {
+        "part_url": "/api/customer/customers/{customerId}/addresses",
+        "req_mode": "POST",
+        "isBFF_part_url": "addCustomerAddress",
+        "isBFF": true,
+        "getReco": false,
+        "responseRootNode": "addCustomerAddressAction"
+      },
+      "updateCustomerAddress": {
+        "part_url": "/api/customer/customers/{customerId}/addresses/{addressId}",
+        "req_mode": "PUT",
+        "isBFF_part_url": "updateCustomerAddress",
+        "isBFF": true,
+        "getReco": false,
+        "responseRootNode": "updateCustomerAddressAction"
+      },
+      "removeAddressAction": {
+        "part_url": "/api/customer/customers/{customerId}/addresses/{addressId}",
+        "req_mode": "DELETE",
+        "isBFF_part_url": "removeAddressAction",
+        "isBFF": true,
+        "getReco": false,
+        "responseRootNode": "removeAddressAction"
+      },
+      "REMOVEADDRESS": {
+        "part_url": "/api/customer/customers/{customerId}/addresses/{addressId}",
+        "req_mode": "DELETE",
+        "isBFF_part_url": "deleteCustomerAddress",
+        "isBFF": true,
+        "getReco": false
+      },
+      "UPDATEADDRESS": {
+        "part_url": "/api/customer/customers/{customerId}/addresses/{addressId}",
+        "req_mode": "PUT",
+        "isBFF_part_url": "updateCustomerAddress",
+        "isBFF": true,
+        "getReco": false
+      },
+      "updateShippingMethod": {
+        "part_url": "/api/cart-operations/checkout/{cartId}/fulfillment-groups/{cartId}-0?price=true",
+        "req_mode": "POST",
+        "isBFF_part_url": "moveToPayment",
+        "isBFF": true,
+        "getReco": false
+      },
+      "setBillingAddress": {
+        "part_url": "/api/cart-operations/checkout/{cartId}/billing-address",
+        "req_mode": "PUT",
+        "isBFF_part_url": "moveToPayment",
+        "isBFF": true,
+        "getReco": false
+      },
+      "placeOrder": {
+        "part_url": "/api/cart-operations/checkout/{cartId}/order",
+        "req_mode": "POST",
+        "isBFF_part_url": "placeOrder",
+        "isBFF": true,
+        "getReco": false
+      },
+      "paymentMethods": {
+        "part_url": "/api/cart-operations/checkout/{cartId}/payment-methods",
+        "req_mode": "POST",
+        "isBFF_part_url": "paymentMethod",
+        "isBFF": true,
+        "getReco": false
+      },
+      "deleteCard": {
+        "part_url": "/api/cart-operations/checkout/{cartId}/payment-methods/{paymentMethodId}",
+        "req_mode": "DELETE",
+        "isBFF_part_url": "deleteCard",
+        "isBFF": true,
+        "getReco": false
+      },
+      "setPaymentMethod": {
+        "part_url": "/api/cart-operations/checkout/{cartId}/payment-methods/{paymentMethodId}",
+        "req_mode": "PUT",
+        "isBFF_part_url": "moveToPlaceOrder",
+        "isBFF": true,
+        "getReco": false
+      },
+      "TopProducts": {
+        "part_url": "/api/catalog-browse/search/catalog?section=TopProducts&size=15&type=PRODUCT&isDESEnable=true",
+        "req_mode": "GET",
+        "getReco": false,
+        "isBFF_part_url": "TopProducts",
+        "responseRootNode":"TopProducts"
+      },
+      "TopCategories": {
+        "part_url": "/api/menu/menu-hierarchy?menuName=HEADER_MENU",
+        "getReco": false,
+        "isBFF_part_url": "TopCategories",
+        "responseRootNode":"TopCategories",
+        "isBFF": true
+      },
+      "MenuTree": {
+        "part_url": "/api/menu/menu-hierarchy?menuName=HEADER_MENU",
+        "getReco": false,
+        "isBFF_part_url": "menu",
+        "responseRootNode":"menu",
+        "isBFF": true
+      },
+      "CustomersAlsoViewed_AWS": {
+        "part_url": "/api/catalog-browse/search/catalog?section=TopProducts&size=15&type=PRODUCT",
+        "responseRootNode":"CustomersAlsoViewed_AWS",
+        "getReco": false
+      },
+      "plpWithoutResults": {
+        "part_url": "/api/catalog-browse/search/catalog?section=FeaturedProduct&size=10&type=PRODUCT",
+        "getReco": false
+      },
+      "Recommendations_AWS": {
+        "part_url": "/api/catalog-browse/search/catalog?section=TopProducts&size=15&type=PRODUCT",
+        "responseRootNode":"Recommendations_AWS",
+        "getReco": false
+      },
+      "FrequentlyBoughtTogether_AWS": {
+        "part_url": "/api/catalog-browse/search/catalog?section=TopProducts&size=15&type=PRODUCT",
+        "responseRootNode":"FrequentlyBoughtTogether_AWS",
+        "getReco": false
+      },
+      "MostViewed_AWS": {
+        "part_url": "/api/catalog-browse/search/catalog?section=BestSellers&size=15&type=PRODUCT",
+        "responseRootNode":"MostViewed_AWS",
+        "getReco": false
+      },
+      "UserRecommend": {
+        "part_url": "/api/catalog-browse/search/catalog?section=UserRecommend&size=15&type=PRODUCT",
+        "responseRootNode":"UserRecommend",
+        "getReco": false
+      },
+      "SIGNIN": {
+        "part_url": "login",
+        "isBFF_part_url": "login",
+        "isBFF": true,
+        "getReco": false
+      },
+      "SIGNOUT": {
+        "part_url": "/api/customer/session",
+        "isBFF_part_url": "logout",
+        "isBFF": true,
+        "getReco": false
+      },
+      "CREATECUSTOMER": {
+        "part_url": "register",
+        "isBFF_part_url": "register",
+        "isBFF": true,
+        "getReco": false
+      },
+      "REFRESHTOKEN": {
+        "part_url": "auth/refresh",
+        "isBFF_part_url": "refreshToken",
+        "isBFF": true,
+        "getReco": false
+      },
+      "RESETPSW": {
+        "part_url": "/api/customer/customers/reset-password",
+        "req_mode": "POST",
+        "isBFF_part_url": "forgotPassword",
+        "isBFF": true,
+        "getReco": false
+      },
+      "PAYMENTINTENT": {
+        "part_url": "/api/payments/payment-intent",
+        "req_mode": "POST",
+        "getReco": false
+      },
+      "USERINFO": {
+        "part_url": "userinfo",
+        "getReco": false
+      },
+      "GETCSRF": {
+        "part_url": "/api/customer/session",
+        "getReco": false
+      },
+      "signUp": {
+        "part_url": "SIGNUP",
+        "responseRootNode":"signUpDetails",
+        "req_mode": "POST"
+      },
+      "getCustomer":{
+        "part_url": "getCustomer",
+        "responseRootNode":"getCustomerAction"
+      }
+    },
+    "XP": {
+      "baseApiUrl": "https://api.australia-southeast1.gcp.commercetools.com/",
+      "authbaseApiUrl": "https://auth.australia-southeast1.gcp.commercetools.com/oauth/token?grant_type=client_credentials",
+      "graphApiUrl": "https://api.australia-southeast1.gcp.commercetools.com/newproject/graphql",
+      "MEGAMENU": {
+        "part_url": "megamenu"
+      },
+      "MenuTree": {
+        "part_url": "menuTree"
+      },
+      "FOOTER": {
+        "part_url": "footer"
+      },
+      "requestType": "GQL"
+    }
+  },
+  "DES": {
+    "SIGNAL": {
+      "authbaseApiUrl_ip": "http://192.168.15.27:8080/desauth/users/authenticate",
+      "authbaseApiUrl": "https://headless.logixal.com/desauth/users/anonymous",
+      "baseApiUrl": "http://192.168.15.27:8080/dessignals"
+    },
+    "XP": {
+      "baseApiUrl": "http://192.168.15.27:8080/desxp",
+      "authbaseApiUrl": "https://headless.logixal.com/desauth/users/anonymous",
+      "Promo": {
+        "part_url": "/expmanager/getExperience/Banner"
+      },
+      "MEGAMENU": {
+        "part_url": "/megamenu"
+      },
+      "MenuTree": {
+        "part_url": "/menuTree"
+      },
+      "PromoImage": {
+        "part_url": "/expmanager/getExperience/PDPDeals"
+      },
+      "requestType": "API"
+    },
+    "AUTH": {
+      "baseApiUrl": "http://192.168.15.27:8080/desauth",
+      "authbaseApiUrl": "https://headless.logixal.com/desauth/users/anonymous",
+      "LOGIN": {
+        "part_url": "/users/authenticate",
+        "req_mode": "POST"
+      },
+      "POSTLOGIN": {
+        "part_url": "/users/authenticate",
+        "req_mode": "POST"
+      },
+      "requestType": "API"
+    },
+    "BASE": {
+      "authbaseApiUrl_ip": "http://192.168.15.27:8080/desauth/users/authenticate",
+      "authbaseApiUrl": "https://headless.logixal.com/desauth/users/anonymous",
+      "baseApiUrl_ip": "http://192.168.15.27:8080/desnodesearch",
+      "baseApiUrl": "http://headless.logixal.com:8080/desnodesearch",
+      "generateToken": true,
+      "PDP": {
+        "part_url1": "/logsearch/WineCommerceSolr/query/ProductPageNew/cea05a24e857651824764b34c3bda419",
+        "part_url": "/logsearch/WineCommerceSolr/query/ProductPageNew/{productId}"
+      },
+      "MODULES": {
+        "part_url": "modules"
+      },
+      "TOPNAVIGATION": {
+        "part_url": "navigation"
+      },
+      "FOOTER": {
+        "part_url": "footer"
+      },
+      "HEADER": {
+        "part_url": "nav"
+      },
+      "TOPNAV": {
+        "part_url": "topnav"
+      },
+      "MENU": {
+        "part_url": "menu"
+      },
+      "PLP": {
+        "part_url": "/logsearch/WineCommerceSolr/query/NewCommerce/shirts"
+      },
+      "FLIST": {
+        "part_url": "categoriesandhelp"
+      },
+      "SEARCH": {
+        "part_url": "/logsearch/WineCommerceSolr/query/NewCommerce/{sku}/[]?sort=0",
+        "getReco": true
+      },
+      "PrimeDeals": {
+        "part_url": "/logsearch/WineCommerceSolr/query/PrimeDeals/*:*/[]?sort=0",
+        "getReco": true
+      },
+      "BestSellers": {
+        "part_url": "/logsearch/WineCommerceSolr/query/BestSellers/*:*/[]?sort=0",
+        "getReco": true
+      },
+      "InspiredProducts": {
+        "part_url": "/logsearch/WineCommerceSolr/query/InspiredProducts",
+        "getReco": true
+      },
+      "TopProducts": {
+        "part_url": "/logsearch/WineCommerceSolr/query/TopProducts",
+        "getReco": true
+      },
+      "Recommend": {
+        "part_url": "/logsearch/WineCommerceSolr/query/UserRecommend/0c9271331d66935e015a984b09fae2de3109eeab3fd0ef14b4c10dc194cea79f"
+      },
+      "NewArrival": {
+        "part_url": "/logsearch/WineCommerceSolr/query/NewArrival",
+        "getReco": true
+      },
+      "FeaturedProduct": {
+        "part_url": "/logsearch/WineCommerceSolr/query/FeaturedProduct",
+        "getReco": true
+      },
+      "TrendingOnSocialMedia": {
+        "part_url": "/logsearch/WineCommerceSolr/query/TrendingOnSocialMedia",
+        "getReco": true,
+        "callBefore": true
+      },
+      "TopDeals": {
+        "part_url": "/logsearch/WineCommerceSolr/query/PrimeDeals/*:*/[]?sort=0"
+      },
+      "PromoImage": {
+        "part_url": "promoimage"
+      },
+      "ItemMLRecoScala": {
+        "part_url": "/logsearch/WineCommerceSolr/query/ItemMLRecoScala/92ba2ce516baffc4075a63eb49a43f05"
+      },
+      "SIMILARPRODUCTS": {
+        "part_url": "similarproducts"
+      },
+      "routeBase": "DES",
+      "tokenName": "DES_token_name",
+      "requestType": "API"
+    }
+  }
+}
