@@ -1,22 +1,16 @@
-import { IsString, IsOptional, IsObject, IsIn } from 'class-validator';
+import { IsString, IsNotEmpty, IsUrl, IsIn } from 'class-validator';
 
 export class RequestOptions {
-    @IsString()
+    @IsUrl({}, { message: 'Endpoint must be a valid URL' })
+    @IsNotEmpty({ message: 'Endpoint is required' })
     endpoint: string;
 
-    @IsString()
-    @IsIn(['GET', 'POST', 'PUT', 'DELETE'])
+    @IsString({ message: 'Method must be a string' })
+    @IsNotEmpty({ message: 'Method is required' })
+    @IsIn(['GET', 'POST', 'PUT', 'DELETE'], { message: 'Method must be one of GET, POST, PUT, DELETE' })
     method: string;
 
-    @IsOptional()
-    @IsObject()
     data?: any;
 
-    @IsOptional()
-    @IsObject()
-    headers?: any;
-
-    constructor(partial: Partial<RequestOptions>) {
-        Object.assign(this, partial);
-    }
+    headers?: Record<string, any>;
 }
