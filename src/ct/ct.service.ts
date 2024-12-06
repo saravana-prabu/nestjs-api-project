@@ -11,9 +11,10 @@ export class CtService implements StoreInterface {
   constructor(private readonly httpService: HttpService) { }
 
   async executeRequest(options: RequestOptions): Promise<any> {
-    const { endpoint, method, data, headers, transformationExpression } = options;
+    const { endpoint, method, data, headers } = options;
     try {
       let responseData;
+      const transformationExpression = '{"data": data}';
       if (method === 'POST' && typeof data === 'object' && data.query) {
         // Handle GraphQL request
         console.log('CtService::endpoint:::', endpoint)

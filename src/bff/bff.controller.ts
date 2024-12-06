@@ -1,6 +1,7 @@
 import { Controller, Post, Body, Param,Request } from '@nestjs/common';
 import { BffService } from './bff.service';
 import { RequestOptions } from '../common/value-object/request-options';
+import { ConfigurationException } from '../exceptions/ConfigurationException';
 import * as config from '../config/config.json';
 
 @Controller('api')
@@ -17,20 +18,26 @@ export class BffController {
     console.log('storeType:', storeType);
     console.log('funcCode:', funcCode);
 
-    // You can access other properties like headers, cookies, etc. from req
-    // console.log('Request headers:', req.headers);
-    // console.log('Request body:', req.body);
+    console.log('storeType:', storeType);
+    console.log('funcCode:', funcCode);
 
-    const proxyKey = config[storeType][funcCode];
-
-    console.log('Request storeType:', storeType);
-    console.log('Request funcCode:', funcCode);
-    console.log('Request proxyKey:', proxyKey);
-
-    if (!proxyKey) {
-      console.error(`No configuration found for storeType: ${storeType}, functionCode: ${funcCode}`);
-      throw new Error('Configuration error');
+    const storeConfig = config[storeType];
+    if (!storeConfig) {
+      throw new ConfigurationException(
+        `Invalid storeType: ${storeType}`,
+        `No configuration found for storeType: ${storeType}`,
+      );
     }
+
+    const proxyKey = storeConfig[funcCode];
+    if (!proxyKey) {
+      throw new ConfigurationException(
+        `Invalid funcCode: ${funcCode}`,
+        `No configuration found for funcCode: ${funcCode} in storeType: ${storeType}`,
+      );
+    }
+
+    console.log('proxyKey:', proxyKey);
 
     // Retrieve baseUrl and part_url from the config
     const baseUrl = config[storeType]?.baseApiUrl;
@@ -44,13 +51,6 @@ export class BffController {
 
     // Construct the full URL by concatenating baseUrl and partURL
     const fullUrl = baseUrl + partURL;
-
-    // requestOptions.storeType = storeType;
-    // requestOptions.funcCode = funcCode;
-    // requestOptions.baseUrl = baseUrl;
-    // requestOptions.partURL = partURL;
-    // requestOptions.reqMethod = reqMethod;
-    // requestOptions.event = req;
 
     requestOptions = {
       ...requestOptions,

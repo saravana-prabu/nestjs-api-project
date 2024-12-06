@@ -200,6 +200,19 @@
       "requestType": "GQL"
     }
   },
+  "VT": {
+    
+    "baseApiUrl": "https://v2.jokeapi.dev",
+
+    "test":{
+       "part_url": "/joke/Any",
+      "req_mode": "GET"
+    },
+    "login": {
+      "part_url": "/auth/embedded/login?",
+      "req_mode": "POST"
+    }
+  },
   "CT": {
     "FACETS":[
       { "facetValue": "color", "facetPath": "variants.attributes.color.key", "facetType": "String" },
@@ -228,6 +241,15 @@
       "changePassword": "customerVersion,changePassword",
       "createReview":"getCustomer,createReview"
     },
+    "baseApiUrl": "https://api.australia-southeast1.gcp.commercetools.com",
+    "test":{
+      "part_url": "/joke/Any",
+     "req_mode": "GET"
+   },
+   "login": {
+     "part_url": "/auth/embedded/login?",
+     "req_mode": "POST"
+   },
     
     "SIGNAL": {
       "baseApiUrl": "http://192.168.15.27:8080/dessignals",
