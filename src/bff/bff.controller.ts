@@ -2,7 +2,7 @@ import { Controller, Post, Body, Param,Request } from '@nestjs/common';
 import { BffService } from './bff.service';
 import { RequestOptions } from '../common/value-object/request-options';
 import { ConfigurationException } from '../exceptions/ConfigurationException';
-import * as config from '../config/config.json';
+// import * as config from '../config/config.json';
 
 @Controller('api')
 export class BffController {
@@ -18,18 +18,21 @@ export class BffController {
     console.log('storeType:', storeType);
     console.log('funcCode:', funcCode);
 
-    console.log('storeType:', storeType);
-    console.log('funcCode:', funcCode);
+    // Retrieve configuration dynamically from the database using BffService
+    const config = await this.bffService.getConfigByStoreType(storeType);
 
-    const storeConfig = config[storeType];
-    if (!storeConfig) {
+    console.log('storeConfig1:', config);
+    
+    // Check if the configuration exists
+    if (!config) {
       throw new ConfigurationException(
         `Invalid storeType: ${storeType}`,
         `No configuration found for storeType: ${storeType}`,
       );
     }
 
-    const proxyKey = storeConfig[funcCode];
+    // Retrieve the funcCode-specific configuration
+    const proxyKey = config.configuration[funcCode];
     if (!proxyKey) {
       throw new ConfigurationException(
         `Invalid funcCode: ${funcCode}`,
@@ -38,11 +41,41 @@ export class BffController {
     }
 
     console.log('proxyKey:', proxyKey);
-
-    // Retrieve baseUrl and part_url from the config
-    const baseUrl = config[storeType]?.baseApiUrl;
+    const baseUrl = config.configuration?.baseApiUrl;
     const partURL = proxyKey?.part_url;
     let reqMethod = proxyKey?.req_mode;
+
+    console.log('baseUrl:', baseUrl);
+    console.log('partURL:', partURL);
+    console.log('reqMethod:', reqMethod);
+
+    if (!baseUrl || !partURL) {
+      console.error('Base URL or part URL is missing in the config');
+      throw new Error('Configuration error');
+    }
+
+    // const storeConfig = config[storeType];
+    // if (!storeConfig) {
+    //   throw new ConfigurationException(
+    //     `Invalid storeType: ${storeType}`,
+    //     `No configuration found for storeType: ${storeType}`,
+    //   );
+    // }
+
+    // const proxyKey = storeConfig[funcCode];
+    // if (!proxyKey) {
+    //   throw new ConfigurationException(
+    //     `Invalid funcCode: ${funcCode}`,
+    //     `No configuration found for funcCode: ${funcCode} in storeType: ${storeType}`,
+    //   );
+    // }
+
+    console.log('proxyKey:', proxyKey);
+
+    //Retrieve baseUrl and part_url from the config
+    // const baseUrl = config[storeType]?.baseApiUrl;
+    // const partURL = proxyKey?.part_url;
+    // let reqMethod = proxyKey?.req_mode;
 
     if (!baseUrl || !partURL) {
       console.error('Base URL or part URL is missing in the config');

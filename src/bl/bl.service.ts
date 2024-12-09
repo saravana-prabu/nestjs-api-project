@@ -53,6 +53,7 @@ export class BlService implements StoreInterface {
     console.log('BlService fullUrl:', fullUrl);
     console.log('BlService method:', method);
     const transformationExpression = jsonBLMapData[funcCode];
+    console.log('BlService transformationExpression:', transformationExpression);
     try {
       const response$ = this.httpService.request({
         url: fullUrl,
